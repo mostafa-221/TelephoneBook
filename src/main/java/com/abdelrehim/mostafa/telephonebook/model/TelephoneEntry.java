@@ -2,6 +2,7 @@ package com.abdelrehim.mostafa.telephonebook.model;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,7 @@ public class TelephoneEntry {
 
     String name;
 
-
+    @Column(unique = true)
     @Pattern(regexp = "^([\\+][0-9]{1,3}([ \\.\\-])?)?([\\(]{1}[0-9]{3}[\\)])"
                     + "?([0-9A-Z \\.\\-]{1,32})((x|ext|extension)?[0-9]{1,4}?)$")
     @NotBlank(message = "phone number is mandatory")
