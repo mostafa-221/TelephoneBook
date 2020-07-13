@@ -21,13 +21,13 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-class TelephoneEntryServiceTest {
+class TelephoneEntryServiceImplTest {
 
     @Mock
     private TelephoneEntryRepository telephoneEntryRepository;
 
     @InjectMocks
-    private TelephoneEntryService telephoneEntryService;
+    private TelephoneEntryServiceImpl telephoneEntryService;
 
     @Test
     void findById() {
